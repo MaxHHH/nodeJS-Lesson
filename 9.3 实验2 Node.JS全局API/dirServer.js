@@ -6,8 +6,11 @@ const path = require("path");
 
 //2.创建一个服务器
 var server = http.createServer(function(req, res) {
+    //req.url 表示url地址中，端口以后的内容
+    //使用了url.parse 将req.url转化为了对象，对象提取pathname
     var urlObj = url.parse(req.url);
     var urlPathName = urlObj.pathname;
+    //根据资源路径，可以决定执行那一段代码
     if(urlPathName == "/favicon.ico") {
         res.end();
     }
