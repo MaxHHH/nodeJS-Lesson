@@ -1,4 +1,3 @@
-function Bomb () {
 function Bomb() {
     this.message = "bomb!";
 }
