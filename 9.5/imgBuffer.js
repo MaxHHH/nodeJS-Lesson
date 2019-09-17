@@ -19,7 +19,7 @@ http.createServer(function (req, res) {
     var htmlStr = "<!DOCTYPE html><head></head>" + "<body><img src='" + imgSrc + "'/></body>" + "</html>"
     res.writeHead(200, {
         "Content-Type": "text/html"
-    });
+    }); 
     res.write(htmlStr);
     res.end();
 }).listen(8081);
